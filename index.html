@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkata Amarnath Malasani</title>
+    <style>
+        :root {
+            --background-color: #1d1f2f;
+            --text-color: white;
+            --secondary-text-color: #b0b0b0;
+            --button-background: #fff;
+            --button-hover-background: #ddd;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Optima', 'Copperplate Gothic Light', fantasy;
+            background: var(--background-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: all 1s ease;
+        }
+
+        .brand-logo img {
+            height: 40px;
+            /* Adjust the height as needed */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--button-hover-background);
+        }
+
+        .intro {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+
+        .intro-text {
+            max-width: 50%;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 1.2s ease;
+            margin-top: 20px;
+            /* Added margin-top */
+        }
+
+        .intro-text h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .intro-text p {
+            font-size: 1.2em;
+            color: var(--secondary-text-color);
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: var(--button-background);
+            color: var(--background-color);
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--button-hover-background);
+        }
+
+        .intro-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .intro-image img {
+            width: 420px;
+            border-radius: 70%;
+            opacity: 0;
+            transform: translateX(80px);
+            transition: all 1.2s ease;
+            margin-left: 30px;
+            margin-top: 20px;
+            /* Adjust this value to move the image up or down */
+            margin-bottom: 20px;
+            /* Adjust this value to move the image up or down */
+        }
+
+        .socials {
+            margin-top: 20px;
+        }
+
+        .socials a {
+            color: var(--text-color);
+            margin-right: 15px;
+            font-size: 20px;
+            text-decoration: none;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        /* Animation classes */
+        .animate {
+            opacity: 1 !important;
+            transform: translate(0, 0) !important;
+        }
+
+        .show {
+            opacity: 1 !important;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .intro {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .intro-text,
+            .intro-image {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .intro-image img {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="brand-logo">
+            <img src="log.png" alt="Brand Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#labs">Labs</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <div class="intro-text" id="intro-text">
+            <h1>Hello! I’m <br> Venkata Amarnath Malasani</h1>
+            <p>
+                DevOps Engineer specializing in AWS Cloud, CI/CD Pipelines, Infrastructure as Code (Terraform), and
+                Kubernetes.
+            </p>
+            <a class="btn" href="AmarnathMalasani.pdf" target="_blank">Get Resume</a>
+            <div class="socials" id="socials">
+                <!-- Removed the social links -->
+            </div>
+        </div>
+        <div class="intro-image" id="intro-img">
+            <img src="amarnath_hd_dimmed.png" alt="Venkata Amarnath Malasani" class="profile-pic">
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('header').classList.add('animate');
+            document.getElementById('intro-text').classList.add('animate');
+            document.getElementById('intro-img').querySelector('img').classList.add('animate');
+
+            // Animate socials after text
+            setTimeout(() => {
+                document.querySelectorAll('#socials a').forEach(link => {
+                    link.classList.add('show');
+                });
+            }, 1200);
+        });
+    </script>
+</body>
+
+</html>
