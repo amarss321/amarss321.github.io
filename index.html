@@ -6,12 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venkata Amarnath Malasani</title>
     <style>
+        :root {
+            --background-color: #1d1f2f;
+            --text-color: white;
+            --secondary-text-color: #b0b0b0;
+            --button-background: #fff;
+            --button-hover-background: #ddd;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #1d1f2f;
-            color: white;
+            background: var(--background-color);
+            color: var(--text-color);
             overflow-x: hidden;
+            font-size: 16px;
         }
 
         header {
@@ -29,6 +38,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 50px;
+            flex-wrap: wrap;
         }
 
         .intro-text {
@@ -45,7 +55,7 @@
 
         .intro-text p {
             font-size: 1.2em;
-            color: #b0b0b0;
+            color: var(--secondary-text-color);
             line-height: 1.6;
         }
 
@@ -53,15 +63,15 @@
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background: #fff;
-            color: #1d1f2f;
+            background: var(--button-background);
+            color: var(--background-color);
             text-decoration: none;
             border-radius: 25px;
             transition: background 0.3s;
         }
 
         .btn:hover {
-            background: #ddd;
+            background: var(--button-hover-background);
         }
 
         .intro-image {
@@ -84,7 +94,7 @@
         }
 
         .socials a {
-            color: white;
+            color: var(--text-color);
             margin-right: 15px;
             font-size: 20px;
             text-decoration: none;
@@ -101,12 +111,29 @@
         .show {
             opacity: 1 !important;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .intro {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .intro-text, .intro-image {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .intro-image img {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <header id="header">
-    </header>
+    <header id="header"></header>
 
     <section class="intro">
         <div class="intro-text" id="intro-text">
