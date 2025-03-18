@@ -1,70 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mirta Akins - Portfolio</title>
+    <title>Portfolio Intro Section</title>
     <style>
         body {
-            font-family: sans-serif;
             margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #1d1f2f;
+            color: white;
         }
 
         header {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-        }
-
-        main {
-            flex-grow: 1;
-            padding: 20px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            padding: 20px 50px;
         }
 
-        .container {
-            text-align: center;
-        }
-
-        h1 {
-            margin-bottom: 10px;
-        }
-
-        p {
-            margin-bottom: 20px;
-        }
-
-        button {
-            background-color: #4CAF50;
+        nav a {
             color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .intro {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+        }
+
+        .intro-text {
+            max-width: 50%;
+        }
+
+        .intro-text h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        .intro-text p {
+            font-size: 1.2em;
+            color: #b0b0b0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
             padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            background: #fff;
+            color: #1d1f2f;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        .intro-image img {
+            width: 300px;
+            border-radius: 50%;
+        }
+
+        .socials {
+            margin-top: 20px;
+        }
+
+        .socials a {
+            color: white;
+            margin-right: 15px;
+            font-size: 20px;
+            text-decoration: none;
         }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>Hello! I'm Mirta Akins</h1>
-        <p>UI/UX Designer specializing in Shopify & Webflow.</p>
+        <div class="logo">Lendex</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Service</a>
+            <a href="#">Blog</a>
+            <a href="#">Pages</a>
+            <a href="#">Contact</a>
+        </nav>
+        <a class="btn" href="#">Hire Me</a>
     </header>
 
-    <main>
-        <div class="container">
-            <p>Get Resume</p> 
-            <button>Hire Me</button>
+    <section class="intro">
+        <div class="intro-text">
+            <h1>Hello! I’m <br> Mirta Akins</h1>
+            <p>UI/UX Designer specializing in Shopify & Webflow.</p>
+            <a class="btn" href="#">Get Resume</a>
+            <div class="socials">
+                <a href="#">f</a>
+                <a href="#">⭑</a>
+                <a href="#">Bē</a>
+            </div>
         </div>
-    </main>
-
-    <script>
-        // You can add JavaScript here for interactive elements if needed.
-    </script>
+        <div class="intro-image">
+            <img src="https://via.placeholder.com/300" alt="Profile Image">
+        </div>
+    </section>
 </body>
+
 </html>
