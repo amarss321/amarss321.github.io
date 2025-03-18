@@ -12,13 +12,20 @@
             background: #1d1f2f;
             color: white;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
         }
 
         header {
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
             align-items: center;
-            padding: 20px 50px;
+            width: 100%;
+            padding: 15px 0;
             opacity: 0;
             transform: translateY(-50px);
             transition: all 1s ease;
@@ -26,20 +33,20 @@
 
         .intro {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            padding: 50px;
+            padding: 50px 20px;
+            max-width: 600px;
         }
 
         .intro-text {
-            max-width: 50%;
             opacity: 0;
-            transform: translateX(-50px);
+            transform: translateY(-30px);
             transition: all 1.2s ease;
         }
 
         .intro-text h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             margin-bottom: 0.5em;
         }
 
@@ -64,19 +71,13 @@
             background: #ddd;
         }
 
-        .intro-image {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-        }
-
         .intro-image img {
-            width: 420px;
-            border-radius: 70%;
+            width: 250px;
+            border-radius: 50%;
             opacity: 0;
-            transform: translateX(80px);
+            transform: translateY(50px);
             transition: all 1.2s ease;
-            margin-left: 30px;
+            margin-top: 20px;
         }
 
         .socials {
@@ -100,6 +101,31 @@
 
         .show {
             opacity: 1 !important;
+        }
+
+        @media (min-width: 768px) {
+            .intro {
+                flex-direction: row;
+                justify-content: center;
+                text-align: left;
+                max-width: 900px;
+            }
+
+            .intro-text {
+                max-width: 50%;
+                text-align: left;
+            }
+
+            .intro-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .intro-image img {
+                width: 320px;
+                margin-left: 30px;
+            }
         }
     </style>
 </head>
