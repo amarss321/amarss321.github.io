@@ -5,8 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venkata Amarnath Malasani</title>
-    <meta name="description" content="Venkata Amarnath Malasani - DevOps Engineer specializing in AWS Cloud, CI/CD, Terraform, Kubernetes, and Infrastructure Automation.">
+    <meta name="description"
+        content="Venkata Amarnath Malasani - DevOps Engineer specializing in AWS Cloud, CI/CD, Terraform, Kubernetes, and Infrastructure Automation.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+    <!-- Replace with your actual kit id or use free cdn below -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
 
     <style>
         :root {
@@ -35,11 +42,12 @@
             transform: translateY(-50px);
             transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            gap: 20px;
         }
 
         .brand-logo img {
             height: 40px;
+            animation: twinkle 2s infinite;
+            /* Added twinkle animation */
         }
 
         .nav-links {
@@ -64,6 +72,8 @@
             justify-content: space-between;
             padding: 50px;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
         }
 
         .intro-text {
@@ -119,15 +129,27 @@
 
         .socials {
             margin-top: 20px;
+            display: flex;
+            gap: 15px;
         }
 
         .socials a {
             color: var(--text-color);
-            margin-right: 15px;
-            font-size: 20px;
+            font-size: 22px;
             text-decoration: none;
             opacity: 0;
-            transition: opacity 0.8s ease;
+            transition: opacity 0.8s ease, color 0.3s;
+            margin-right: 15px;
+            /* Added margin-right for spacing */
+        }
+
+        .socials a:last-child {
+            margin-right: 0;
+            /* Remove margin-right for the last icon */
+        }
+
+        .socials a:hover {
+            color: var(--button-hover-background);
         }
 
         /* Animation classes */
@@ -138,6 +160,19 @@
 
         .show {
             opacity: 1 !important;
+        }
+
+        /* Twinkle animation */
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
         }
 
         /* Responsive Design */
@@ -163,10 +198,22 @@
                 gap: 10px;
             }
         }
+
+        /* Vanta.js container */
+        #vanta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
     </style>
 </head>
 
 <body>
+    <div id="vanta-bg"></div> <!-- Vanta.js container -->
+
     <header id="header">
         <div class="brand-logo">
             <img src="log.png" alt="Brand Logo">
@@ -182,11 +229,20 @@
         <div class="intro-text" id="intro-text">
             <h1>Hello! I’m <br> Venkata Amarnath Malasani</h1>
             <p>
-                DevOps Engineer specializing in AWS Cloud, CI/CD Pipelines, Infrastructure as Code (Terraform), and Kubernetes.
+                DevOps Engineer specializing in AWS Cloud, CI/CD Pipelines, Infrastructure as Code (Terraform), and
+                Kubernetes.
             </p>
             <a class="btn" href="AmarnathMalasani.pdf" target="_blank">Get Resume</a>
             <div class="socials" id="socials">
-                <!-- Placeholder for future socials -->
+                <a href="https://linkedin.com/in/mv-amarnath" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/amarss321" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:mvenkataamarnath@example.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
         </div>
         <div class="intro-image" id="intro-img">
@@ -204,7 +260,20 @@
                 document.querySelectorAll('#socials a').forEach(link => {
                     link.classList.add('show');
                 });
-            }, 1200);
+            }, 12);
+
+            VANTA.NET({
+                el: "#vanta-bg",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                backgroundColor: 0x1d1f2f, // Background color in hexadecimal
+                showDots: false
+            });
         });
     </script>
 </body>
