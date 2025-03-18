@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Intro Section</title>
+    <title>Animated Portfolio Intro</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background: #1d1f2f;
             color: white;
+            overflow-x: hidden;
         }
 
         header {
@@ -18,6 +19,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: all 1s ease;
         }
 
         nav a {
@@ -35,6 +39,9 @@
 
         .intro-text {
             max-width: 50%;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 1.2s ease;
         }
 
         .intro-text h1 {
@@ -55,11 +62,19 @@
             color: #1d1f2f;
             text-decoration: none;
             border-radius: 25px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #ddd;
         }
 
         .intro-image img {
             width: 300px;
             border-radius: 50%;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 1.2s ease;
         }
 
         .socials {
@@ -71,12 +86,24 @@
             margin-right: 15px;
             font-size: 20px;
             text-decoration: none;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        /* Animation classes */
+        .animate {
+            opacity: 1 !important;
+            transform: translate(0, 0) !important;
+        }
+
+        .show {
+            opacity: 1 !important;
         }
     </style>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="logo">Lendex</div>
         <nav>
             <a href="#">Home</a>
@@ -89,20 +116,35 @@
     </header>
 
     <section class="intro">
-        <div class="intro-text">
+        <div class="intro-text" id="intro-text">
             <h1>Hello! I’m <br> Mirta Akins</h1>
             <p>UI/UX Designer specializing in Shopify & Webflow.</p>
             <a class="btn" href="#">Get Resume</a>
-            <div class="socials">
+            <div class="socials" id="socials">
                 <a href="#">f</a>
                 <a href="#">⭑</a>
                 <a href="#">Bē</a>
             </div>
         </div>
-        <div class="intro-image">
+        <div class="intro-image" id="intro-img">
             <img src="https://via.placeholder.com/300" alt="Profile Image">
         </div>
     </section>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('header').classList.add('animate');
+            document.getElementById('intro-text').classList.add('animate');
+            document.getElementById('intro-img').querySelector('img').classList.add('animate');
+
+            // Animate socials after text
+            setTimeout(() => {
+                document.querySelectorAll('#socials a').forEach(link => {
+                    link.classList.add('show');
+                });
+            }, 1200);
+        });
+    </script>
 </body>
 
 </html>
