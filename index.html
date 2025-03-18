@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venkata Amarnath Malasani</title>
-    <link href="https://fonts.googleapis.com/css2?family=Optima:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Venkata Amarnath Malasani - DevOps Engineer specializing in AWS Cloud, CI/CD, Terraform, Kubernetes, and Infrastructure Automation.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --background-color: #1d1f2f;
             --text-color: white;
             --secondary-text-color: #b0b0b0;
-            --button-background: #fff;
-            --button-hover-background: #ddd;
+            --button-background: #00c6ff;
+            --button-hover-background: #0099cc;
         }
 
         body {
             margin: 0;
-            'Poppins', Arial, sans-serif;
             font-family: 'Poppins', Arial, sans-serif;
             background: var(--background-color);
             color: var(--text-color);
@@ -32,12 +33,13 @@
             padding: 20px 50px;
             opacity: 0;
             transform: translateY(-50px);
-            transition: all 1s ease;
+            transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            gap: 20px;
         }
 
         .brand-logo img {
             height: 40px;
-            /* Adjust the height as needed */
         }
 
         .nav-links {
@@ -68,9 +70,8 @@
             max-width: 50%;
             opacity: 0;
             transform: translateX(-50px);
-            transition: all 1.2s ease;
+            transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
             margin-top: 20px;
-            /* Added margin-top */
         }
 
         .intro-text h1 {
@@ -89,7 +90,7 @@
             margin-top: 20px;
             padding: 10px 20px;
             background: var(--button-background);
-            color: var(--background-color);
+            color: white;
             text-decoration: none;
             border-radius: 25px;
             transition: background 0.3s;
@@ -110,12 +111,10 @@
             border-radius: 70%;
             opacity: 0;
             transform: translateX(80px);
-            transition: all 1.2s ease;
+            transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
             margin-left: 30px;
             margin-top: 20px;
-            /* Adjust this value to move the image up or down */
             margin-bottom: 20px;
-            /* Adjust this value to move the image up or down */
         }
 
         .socials {
@@ -152,11 +151,16 @@
             .intro-image {
                 max-width: 100%;
                 margin: 0 auto;
+                text-align: center;
             }
 
             .intro-image img {
                 width: 100%;
                 margin-left: 0;
+            }
+
+            .nav-links {
+                gap: 10px;
             }
         }
     </style>
@@ -178,12 +182,11 @@
         <div class="intro-text" id="intro-text">
             <h1>Hello! I’m <br> Venkata Amarnath Malasani</h1>
             <p>
-                DevOps Engineer specializing in AWS Cloud, CI/CD Pipelines, Infrastructure as Code (Terraform), and
-                Kubernetes.
+                DevOps Engineer specializing in AWS Cloud, CI/CD Pipelines, Infrastructure as Code (Terraform), and Kubernetes.
             </p>
             <a class="btn" href="AmarnathMalasani.pdf" target="_blank">Get Resume</a>
             <div class="socials" id="socials">
-                <!-- Removed the social links -->
+                <!-- Placeholder for future socials -->
             </div>
         </div>
         <div class="intro-image" id="intro-img">
@@ -197,7 +200,6 @@
             document.getElementById('intro-text').classList.add('animate');
             document.getElementById('intro-img').querySelector('img').classList.add('animate');
 
-            // Animate socials after text
             setTimeout(() => {
                 document.querySelectorAll('#socials a').forEach(link => {
                     link.classList.add('show');
