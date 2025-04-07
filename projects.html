@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Venkata Amarnath Malasani</title>
+    <meta name="description" content="DevOps projects by Venkata Amarnath Malasani, showcasing expertise in AWS, Kubernetes, CI/CD, and Infrastructure as Code.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="log.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Vanta.js for background effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div id="vanta-bg"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="brand-logo">
+            <a href="index.html">
+                <img src="log.png" alt="Amarnath Malasani Logo">
+            </a>
+        </div>
+        
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="section-title animate-on-scroll">My Projects</h1>
+            <p class="section-subtitle animate-on-scroll">A showcase of my DevOps engineering work and technical projects</p>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <!-- Project 1 -->
+            <div class="project-detailed animate-on-scroll" id="aws-infra">
+                <div class="project-header">
+                    <h2>AWS Infrastructure Automation</h2>
+                    <div class="project-tags">
+                        <span class="project-tag">AWS</span>
+                        <span class="project-tag">Terraform</span>
+                        <span class="project-tag">Jenkins</span>
+                        <span class="project-tag">IaC</span>
+                    </div>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/800x500/25273d/ffffff?text=AWS+Infrastructure+Diagram" alt="AWS Infrastructure Diagram">
+                    </div>
+                    
+                    <div class="project-description">
+                        <h3>Project Overview</h3>
+                        <p>Designed and implemented a fully automated AWS infrastructure deployment using Infrastructure as Code principles with Terraform. The solution includes a multi-environment setup (development, staging, production) with proper network segmentation, security controls, and scalability features.</p>
+                        
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>Multi-account AWS architecture following AWS Well-Architected Framework</li>
+                            <li>Infrastructure as Code using Terraform with modular design</li>
+                            <li>Automated CI/CD pipeline for infrastructure changes using Jenkins</li>
+                            <li>Comprehensive monitoring and alerting with CloudWatch and Grafana</li>
+                            <li>Disaster recovery strategy with cross-region replication</li>
+                        </ul>
+                        
+                        <h3>CI/CD Pipeline Visualization</h3>
+                        <div class="pipeline-visualization">
+                            <div class="pipeline-step">
+                                <i class="fas fa-code"></i>
+                                <span>Code</span>
+                            </div>
+                            <div class="pipeline-arrow">→</div>
+                            <div class="pipeline-step">
+                                <i class="fas fa-vial"></i>
+                                <span>Test</span>
+                            </div>
+                            <div class="pipeline-arrow">→</div>
+                            <div class="pipeline-step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Validate</span>
+                            </div>
+                            <div class="pipeline-arrow">→</div>
+                            <div class="pipeline-step">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Deploy</span>
+                            </div>
+                            <div class="pipeline-arrow">→</div>
+                            <div class="pipeline-step">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Monitor</span>
+                            </div>
+                        </div>
+                        
+                        <h3>Technologies Used</h3>
+                        <p>AWS (EC2, VPC, S3, RDS, Lambda), Terraform, Jenkins, CloudWatch, Grafana, Git</p>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/amarss321" target="_blank" class="btn btn-outline">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-detailed animate-on-scroll" id="k8s-cluster">
+                <div class="project-header">
+                    <h2>Kubernetes Cluster Setup & Management</h2>
+                    <div class="project-tags">
+                        <span class="project-tag">Kubernetes</span>
+                        <span class="project-tag">AWS EKS</span>
+                        <span class="project-tag">Prometheus</span>
+                        <span class="project-tag">Helm</span>
+                    </div>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/800x500/25273d/ffffff?text=Kubernetes+Architecture" alt="Kubernetes Architecture">
+                    </div>
+                    
+                    <div class="project-description">
+                        <h3>Project Overview</h3>
+                        <p>Designed and implemented a highly available Kubernetes cluster on AWS EKS with automated scaling, monitoring, and self-healing capabilities. The solution provides a robust platform for deploying microservices with proper resource isolation and security controls.</p>
+                        
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>Highly available Kubernetes cluster with multi-AZ deployment</li>
+                            <li>Automated node scaling based on resource utilization</li>
+                            <li>Comprehensive monitoring with Prometheus and Grafana</li>
+                            <li>Service mesh implementation with Istio for traffic management</li>
+                            <li>GitOps workflow with ArgoCD for continuous deployment</li>
+                        </ul>
+                        
+                        <h3>Cluster Architecture</h3>
+                        <div class="architecture-diagram">
+                            <pre>
+┌─────────────────────────────────────────────────────┐
+│                   AWS Cloud                          │
+│                                                     │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────┐  │
+│  │             │    │             │    │         │  │
+│  │  AZ-1       │    │  AZ-2       │    │  AZ-3   │  │
+│  │  Worker     │    │  Worker     │    │  Worker │  │
+│  │  Nodes      │    │  Nodes      │    │  Nodes  │  │
+│  │             │    │             │    │         │  │
+│  └─────────────┘    └─────────────┘    └─────────┘  │
+│                                                     │
+│  ┌─────────────────────────────────────────────────┐│
+│  │                EKS Control Plane                 ││
+│  └─────────────────────────────────────────────────┘│
+│                                                     │
+└─────────────────────────────────────────────────────┘
+                            │
+                            ▼
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│               Monitoring & Logging                  │
+│                                                     │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────┐  │
+│  │             │    │             │    │         │  │
+│  │  Prometheus │    │  Grafana    │    │  ELK    │  │
+│  │             │    │             │    │  Stack  │  │
+│  └─────────────┘    └─────────────┘    └─────────┘  │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+                            </pre>
+                        </div>
+                        
+                        <h3>Technologies Used</h3>
+                        <p>Kubernetes, AWS EKS, Helm, Prometheus, Grafana, Istio, ArgoCD, Terraform</p>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/amarss321" target="_blank" class="btn btn-outline">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-detailed animate-on-scroll" id="cicd-pipeline">
+                <div class="project-header">
+                    <h2>CI/CD Pipeline Optimization</h2>
+                    <div class="project-tags">
+                        <span class="project-tag">Jenkins</span>
+                        <span class="project-tag">Docker</span>
+                        <span class="project-tag">GitHub Actions</span>
+                        <span class="project-tag">Microservices</span>
+                    </div>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/800x500/25273d/ffffff?text=CI/CD+Pipeline+Workflow" alt="CI/CD Pipeline Workflow">
+                    </div>
+                    
+                    <div class="project-description">
+                        <h3>Project Overview</h3>
+                        <p>Optimized CI/CD pipelines for a microservices architecture, reducing deployment time by 70% and improving reliability. Implemented automated testing, security scanning, and deployment strategies to ensure high-quality releases.</p>
+                        
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>Parallel execution of build and test stages for faster feedback</li>
+                            <li>Automated security scanning with SonarQube and OWASP dependency check</li>
+                            <li>Blue-green deployment strategy for zero-downtime releases</li>
+                            <li>Automated rollback mechanisms based on health checks</li>
+                            <li>Comprehensive metrics collection for pipeline performance</li>
+                        </ul>
+                        
+                        <h3>Performance Improvements</h3>
+                        <div class="performance-metrics">
+                            <div class="metric">
+                                <div class="metric-title">Deployment Time</div>
+                                <div class="metric-value">-70%</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-title">Build Success Rate</div>
+                                <div class="metric-value">+25%</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-title">Rollback Time</div>
+                                <div class="metric-value">-85%</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-title">Security Issues</div>
+                                <div class="metric-value">-40%</div>
+                            </div>
+                        </div>
+                        
+                        <h3>Technologies Used</h3>
+                        <p>Jenkins, Docker, GitHub Actions, SonarQube, Kubernetes, Helm, Prometheus</p>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/amarss321" target="_blank" class="btn btn-outline">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-detailed animate-on-scroll" id="monitoring-system">
+                <div class="project-header">
+                    <h2>Cloud Monitoring & Alerting System</h2>
+                    <div class="project-tags">
+                        <span class="project-tag">Prometheus</span>
+                        <span class="project-tag">Grafana</span>
+                        <span class="project-tag">ELK Stack</span>
+                        <span class="project-tag">AWS CloudWatch</span>
+                    </div>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/800x500/25273d/ffffff?text=Monitoring+Dashboard" alt="Monitoring Dashboard">
+                    </div>
+                    
+                    <div class="project-description">
+                        <h3>Project Overview</h3>
+                        <p>Designed and implemented a comprehensive monitoring and alerting system for cloud infrastructure and applications. The solution provides real-time visibility into system health, performance metrics, and business KPIs with automated alerting and incident response.</p>
+                        
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>Real-time monitoring of infrastructure, applications, and services</li>
+                            <li>Custom dashboards for different stakeholders (DevOps, Management, Development)</li>
+                            <li>Intelligent alerting with noise reduction and correlation</li>
+                            <li>Automated incident response for common issues</li>
+                            <li>Historical data analysis for capacity planning</li>
+                        </ul>
+                        
+                        <h3>Monitoring Architecture</h3>
+                        <div class="architecture-diagram">
+                            <pre>
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│                  Data Sources                       │
+│                                                     │
+│  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐ │
+│  │         │  │         │  │         │  │         │ │
+│  │  AWS    │  │  K8s    │  │  Apps   │  │  Custom │ │
+│  │  Cloud  │  │  Cluster│  │  Logs   │  │  Metrics│ │
+│  │         │  │         │  │         │  │         │ │
+│  └────┬────┘  └────┬────┘  └────┬────┘  └────┬────┘ │
+│       │            │            │            │      │
+└───────┼────────────┼────────────┼────────────┼──────┘
+        │            │            │            │
+        ▼            ▼            ▼            ▼
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│                 Collection Layer                    │
+│                                                     │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────┐  │
+│  │             │    │             │    │         │  │
+│  │  Prometheus │    │  Fluentd    │    │  Beats  │  │
+│  │             │    │             │    │         │  │
+│  └──────┬──────┘    └──────┬──────┘    └────┬────┘  │
+│         │                  │                │       │
+└─────────┼──────────────────┼────────────────┼───────┘
+          │                  │                │
+          ▼                  ▼                ▼
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│                 Storage Layer                       │
+│                                                     │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────┐  │
+│  │             │    │             │    │         │  │
+│  │  Prometheus │    │  Elasticsearch   │  InfluxDB  │
+│  │  TSDB       │    │             │    │         │  │
+│  └──────┬──────┘    └──────┬──────┘    └────┬────┘  │
+│         │                  │                │       │
+└─────────┼──────────────────┼────────────────┼───────┘
+          │                  │                │
+          ▼                  ▼                ▼
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│                Visualization Layer                  │
+│                                                     │
+│  ┌─────────────────────────────────────────────────┐│
+│  │                                                 ││
+│  │                   Grafana                       ││
+│  │                                                 ││
+│  └─────────────────────────────────────────────────┘│
+│                                                     │
+└─────────────────────────────────────────────────────┘
+                            │
+                            ▼
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│                  Alerting Layer                     │
+│                                                     │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────┐  │
+│  │             │    │             │    │         │  │
+│  │  AlertManager    │  PagerDuty  │    │  Slack  │  │
+│  │             │    │             │    │         │  │
+│  └─────────────┘    └─────────────┘    └─────────┘  │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+                            </pre>
+                        </div>
+                        
+                        <h3>Technologies Used</h3>
+                        <p>Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana), AWS CloudWatch, AlertManager, PagerDuty</p>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/amarss321" target="_blank" class="btn btn-outline">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/mv-amarnath" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/amarss321" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:mvenkataamarnath@example.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <p class="copyright">&copy; 2025 Venkata Amarnath Malasani. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-sun" id="theme-icon"></i>
+    </div>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Venkata Amarnath Malasani</title>
+    <meta name="description" content="Get in touch with Venkata Amarnath Malasani, DevOps Engineer specializing in AWS, Kubernetes, CI/CD, and Infrastructure as Code.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="log.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Vanta.js for background effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Additional styles specific to the contact page */
+        .terminal-container {
+            font-family: 'Source Code Pro', monospace;
+        }
+        
+        .terminal-prompt-text {
+            color: var(--terminal-prompt);
+        }
+        
+        .terminal-input {
+            font-family: 'Source Code Pro', monospace;
+        }
+        
+        .terminal-submit {
+            font-family: 'Source Code Pro', monospace;
+        }
+        
+        .terminal-response {
+            margin-top: 15px;
+            color: var(--terminal-text);
+        }
+        
+        .contact-info-container {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+        
+        .contact-map {
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+        
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Animation -->
+    <div id="vanta-bg"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="brand-logo">
+            <a href="index.html">
+                <img src="log.png" alt="Amarnath Malasani Logo">
+            </a>
+        </div>
+        
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="section-title animate-on-scroll">Get In Touch</h1>
+            <p class="section-subtitle animate-on-scroll">Let's discuss how I can help with your DevOps needs</p>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-info-container">
+                        <h2>Contact Information</h2>
+                        <p>Feel free to reach out through any of the following channels:</p>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-item-content">
+                                <h4>Email</h4>
+                                <p><a href="mailto:mvenkataamarnath@example.com">mvenkataamarnath@example.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="contact-item-content">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-item-content">
+                                <h4>Location</h4>
+                                <p>San Francisco, California, USA</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div class="contact-item-content">
+                                <h4>LinkedIn</h4>
+                                <p><a href="https://linkedin.com/in/mv-amarnath" target="_blank">linkedin.com/in/mv-amarnath</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div class="contact-item-content">
+                                <h4>GitHub</h4>
+                                <p><a href="https://github.com/amarss321" target="_blank">github.com/amarss321</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.50764017948553!3d37.75781499657369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1617597848045!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Terminal Contact Form -->
+                <div class="terminal-container animate-on-scroll">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <div class="terminal-button red"></div>
+                            <div class="terminal-button yellow"></div>
+                            <div class="terminal-button green"></div>
+                        </div>
+                        <div class="terminal-title">contact@amarnath-malasani.com</div>
+                    </div>
+                    
+                    <div class="terminal-body">
+                        <div class="terminal-prompt">
+                            <span class="terminal-prompt-sign">$</span>
+                            <span class="terminal-prompt-text">./send-message.sh</span>
+                        </div>
+                        
+                        <form id="terminal-form" class="terminal-form">
+                            <div class="terminal-prompt">
+                                <span class="terminal-prompt-sign">></span>
+                                <span class="terminal-prompt-text">Enter your name:</span>
+                            </div>
+                            <input type="text" class="terminal-input" placeholder="John Doe" required>
+                            
+                            <div class="terminal-prompt">
+                                <span class="terminal-prompt-sign">></span>
+                                <span class="terminal-prompt-text">Enter your email:</span>
+                            </div>
+                            <input type="email" class="terminal-input" placeholder="john@example.com" required>
+                            
+                            <div class="terminal-prompt">
+                                <span class="terminal-prompt-sign">></span>
+                                <span class="terminal-prompt-text">Enter subject:</span>
+                            </div>
+                            <input type="text" class="terminal-input" placeholder="DevOps Consultation" required>
+                            
+                            <div class="terminal-prompt">
+                                <span class="terminal-prompt-sign">></span>
+                                <span class="terminal-prompt-text">Enter your message:</span>
+                            </div>
+                            <textarea class="terminal-input" rows="4" placeholder="I'd like to discuss a potential project..." required></textarea>
+                            
+                            <button type="submit" class="terminal-submit">$ send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Availability Section -->
+    <section id="availability">
+        <div class="container">
+            <div class="availability-container animate-on-scroll">
+                <h2 class="section-title">Current Availability</h2>
+                <p>I'm currently available for freelance work and consulting. My typical engagement includes:</p>
+                
+                <ul>
+                    <li>DevOps infrastructure setup and optimization</li>
+                    <li>CI/CD pipeline implementation</li>
+                    <li>Cloud migration and architecture design</li>
+                    <li>Kubernetes deployment and management</li>
+                    <li>Infrastructure as Code implementation</li>
+                    <li>DevOps training and mentorship</li>
+                </ul>
+                
+                <p>If you're interested in working together, please get in touch using the contact form above or any of the provided contact methods.</p>
+                
+                <a href="AmarnathMalasani.pdf" target="_blank" class="btn">Download Resume</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/mv-amarnath" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/amarss321" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:mvenkataamarnath@example.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <p class="copyright">&copy; 2025 Venkata Amarnath Malasani. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-sun" id="theme-icon"></i>
+    </div>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
